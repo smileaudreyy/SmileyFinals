@@ -19,6 +19,9 @@ function () {
     var pathString; // Holds path string 
     var mousePushed = false // mousedown state
 
+    var audio = new Audio("resources/frozen.mp3");
+    audio.play();
+
 
     // This portion is for the creation of a new button, so that the user may draw/ colour a different design
     var buttonOne = paper.circle(50, 50, 30);
