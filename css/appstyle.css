@@ -1,0 +1,141 @@
+html, body {  /* Select and size the outermost elements so other elements can be set in % */
+	height:100%;
+	width:99%;
+}
+
+body {
+   font: 30px Helvetica;
+   color: white;
+   background-color: grey;
+
+  }
+
+  #main {  /* select element with id="main" */ 
+   min-height: 70%;
+   max-height: 70%;
+   width: 100%;
+   margin: 0px;
+   padding: 0px;
+   display:  flex;
+   flex-flow: row;
+      }
+ 
+  #main > article { /* select articles (if they are inside the element with id="main") */ 
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #cccc33;
+   border-radius: 7pt;
+   background: #dddd88;
+   flex: 3 1 50%;
+   order: 2;
+   overflow: scroll;
+   }
+
+  #main > #svgcanvasDiv {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid black;
+   border-radius: 7pt;
+   background: pink;
+   flex: 3 1 50%;
+   order: 2;
+   overflow: scroll;
+   text-align: center;
+   }
+
+#svgcanvas {
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;  
+    border-color: black;
+    height: 550px;
+    width: 450px;
+}
+
+  
+  #main > aside {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 7pt;
+   background: #ccccff;
+           flex: 1 6 15%;
+           order: 3;
+
+   }
+
+   #main > nav {
+    width: 50%;
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+   border-radius: 7pt;
+   background: #ccccff;
+           flex: 1 2 100%;
+           order: 1;
+
+
+   }
+
+    
+  header, footer {  /* select all header and footer elements */
+   display: block;
+   margin: 4px;
+   padding: 5px;
+   min-height: 10%;
+   border: 1px solid #eebb55;
+   border-radius: 7pt;
+   background-image: url('http://wallpapercave.com/wp/YjguPTP.png');
+   text-align: center;
+ }
+
+.trying {
+  position: relative;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  height: 10%;
+  width: 300%;
+  -webkit-animation: trying 5s linear infinite;
+  -moz-animation:    trying 5s linear infinite;
+  }
+  @-webkit-keyframes trying {
+  0%    { left: 0; }
+  100%  { left: -200%; }
+  }
+  @moz-keyframes trying {
+  0%    { left: 0; }
+  100%  { left: -200%; }
+  }
+
+
+
+  footer {    /* override these attributes just for the footer elements */
+   font-size: 10pt;
+   text-align: left;
+   }
+
+
+ 
+  /* Changes layout under these conditions : Too narrow to support three columns */
+  /* "at-rules" using the '@' sign is an "advanced" feature */ 
+  @media all and (max-width: 640px) {
+  
+   #main, #page {
+    flex-flow: column;
+    flex-direction: column;
+   }
+
+   #main > article, #main > aside, #main > nav {
+    /* Return them to document order */
+            order: 0;
+   }
+  
+   #main > nav, #main > aside, header, footer {
+    min-height: 50px;
+    max-height: 50px;
+      }
+  
+};
+
