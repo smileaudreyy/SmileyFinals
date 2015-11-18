@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">   
+        <script type="text/javascript" src="jslibs/raphael.js"></script>
+        <script type="text/javascript" data-main="appscripts/main.js" src="jslibs/require.js">
+        </script>
+        <title>The Final One</title>
+    </head>
+
+  <body>
+    <header> <div class="trying">
+    Happy Colouring :)</div> </header>
+
+    <div id='main'>
+
+         <div id="svgcanvasDiv"> 
+            <div id="svgcanvas"> </div>  <!--  <article>   article  </article> -->
+        </div>
+
+        <aside>Controls<br>
+            Hue<br>
+            <input id="sliderHue" type= "range" step=".05" min="0" max="1" value=".5"><br>
+            Saturation
+            <input id="sliderSaturation" type= "range" step=".05" min="0" max="1" value=".5"><br>
+            Lightness
+            <input id="sliderLightness" type= "range" step=".05" min="0" max="1" value=".5"><br>
+            Opacity<br>
+            <input id="sliderOpacity" type= "range" step=".05" min="0" max="1" value=".5">
+            
+            <input id="clearButton" type="button" value="Clear">
+         </aside>
+
+      
+    </div>
+
+       <footer>Credits:
+        <p> AUDREY TAY :) </p>
+            </footer>
+            <nav>
+            <audio controls autoplay>
+                <source src="../resources/frozen.mp3" type="audio/mpeg">
+            </audio>
+            </nav>
+  </body>
+</html>
+
